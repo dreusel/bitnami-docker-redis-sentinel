@@ -311,6 +311,8 @@ $ docker-compose restart redis
 Refer to the [Redis configuration](http://redis.io/topics/config) manual for the complete list of configuration options.
 
 # Logging
+> Note: due to an issue (see https://github.com/bitnami/bitnami-docker-redis-sentinel/issues/34) logging currently doesn't work as described here. Instead logs are found inside the container in `/opt/bitnami/redis-sentinel/logs/redis-sentinel.log`. To view them:  
+>```docker exec -it <container name> tail -f /opt/bitnami/redis-sentinel/logs/redis-sentinel.log```
 
 The Bitnami Redis Sentinel Docker Image sends the container logs to the `stdout`. To view the logs:
 
